@@ -1,0 +1,46 @@
+/* Logo color */
+.navbar-brand {
+  color: #f0ad4e !important;
+}
+
+/* Alphabet styling */
+.alphabet {
+  font-size: 14px;
+  letter-spacing: 4px;
+  color: #666;
+}
+
+/* Categories */
+.categories {
+  font-size: 12px;
+}
+
+/* Cards */
+.show-card {
+  border: none;
+  transition: transform 0.2s ease;
+}
+
+/* Hover effect */
+.show-card:hover {
+  transform: scale(1.05);
+}
+
+/* Card images */
+.show-card img {
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Search box */
+input.form-control {
+  border-radius: 20px;
+  padding-left: 15px;
+}
+
+/* Section title */
+h5 {
+  font-size: 16px;
+}
+
+
