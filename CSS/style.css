@@ -1,232 +1,72 @@
-/* =========================
-   GLOBAL
-========================= */
 body {
-  background: #ecf0f3;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  font-family: Arial;
+  margin: 0;
 }
 
-/* =========================
-   NAVBAR
-========================= */
 .navbar {
-  background: #1a1a2e !important;
-  border-bottom: 2px solid #f5c518;
+  padding: 12px 0;
 }
 
 .navbar-brand {
-  background: #f5c518;
-  color: #1a1a2e !important;
   font-weight: bold;
-  padding: 5px 12px;
-  border-radius: 4px;
 }
 
-.navbar a {
-  color: #ddd !important;
-}
-
-.navbar a:hover {
-  color: #fff !important;
-}
-
-/* =========================
-   ALPHABET FILTER
-========================= */
-.alphabet a {
-  margin: 0 5px;
-  color: #555;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.alphabet a:hover {
-  color: #000;
-  text-decoration: underline;
-}
-
-/* =========================
-   CATEGORY FILTER
-========================= */
-.categories span {
-  display: inline-block;
-  margin: 5px;
-  padding: 8px 14px;
-  border-radius: 20px;
-  background:#e0e0e0;
-  cursor: pointer;
-  font-size: 14px;
-  transition: all 0.2s ease;
-  border: 1px solid transparent;
-}
-
-.categories span:hover {
-  background: #1a1a2e;
-  color: #fff;
-}
-
-.categories span.active-category {
-  background: #f5c518;
-  color: #000;
-  font-weight: 600;
-  border: 1px solid #d4a90c;
-}
-
-/* =========================
-   SECTION BOX
-========================= */
-.section-box {
+/* boxes */
+.signup-box,
+.login-box,
+.form-box {
+  max-width: 400px;
+  margin: auto;
   background: #fff;
   padding: 20px;
-  border-radius: 6px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* =========================
-   SHOW CARDS (HOME)
-========================= */
+/* titles */
+.signup-title,
+.login-title,
+.form-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* detail page */
 .show-card {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: 0.3s;
-  cursor: pointer;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-.show-card img {
-  width: 100%;
-  height: 250px;      
-  object-fit: cover;
-  height: 250px;
-  object-fit: cover;
-}
-
-.show-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-}
-
-.card-title {
-  font-weight: 600;
-  font-size: 16px;
-}
-
-.card-text {
-  font-size: 14px;
-  color: #777;
-}
-
-/* =========================
-   SEARCH BAR
-========================= */
-input.form-control {
-  border-radius: 20px;
-  padding: 8px 15px;
-  border: 1px solid #ccc;
-}
-
-/* =========================
-   DETAILS PAGE
-========================= */
 .show-img {
   width: 100%;
-  max-width: 200px;
-  border-radius: 5px;
+  max-width: 220px;   /* limit size */
+  height: 300px;      /* fixed height */
+  object-fit: cover;  /* crop nicely */
+  border-radius: 12px;
 }
 
 .rating {
-  color: #e74c3c;
+  color: red;
   font-weight: bold;
-  font-size: 18px;
 }
 
-/* =========================
-   BUTTONS
-========================= */
-.btn-primary {
-  background: #3498db;
-  border: none;
-  border-radius: 20px;
-}
-
-.btn-primary:hover {
-  background: #2c80b4;
-}
-
-.btn-success {
-  border-radius: 20px;
-}
-
-
-.info-bar {
-  background: #d9edf7;
-  padding: 10px;
-  border-radius: 4px;
-  margin-top: 15px;
-  font-size: 14px;
-  color: #31708f;
-}
-
-
-.episodes-box {
-  background: #fff;
-  margin-top: 15px;
-  border-radius: 5px;
-  padding: 15px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-
+/* episodes */
 .episode-item {
-  padding: 10px 0;
-  border-bottom: 1px solid #eee;
-  cursor: pointer;
-}
-
-.episode-item:last-child {
-  border-bottom: none;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  transition: 0.3s;
 }
 
 .episode-item:hover {
-  background: #f7f7f7;
-}
-
-.episode-title {
-  font-weight: 600;
-}
-
-.episode-meta {
-  font-size: 12px;
-  color: #888;
+  background: #eee;
+  cursor: pointer;
 }
 
 
-.form-box,
-.login-box,
-.signup-box {
-  background: #fff;
-  padding: 30px;
-  border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  max-width: 400px;
-  margin: auto;
-}
-
-.form-title,
-.login-title,
-.signup-title {
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-align: center;
-}
 
 
-a {
-  text-decoration: none;
-}
 
-a:hover {
-  text-decoration: underline;
-}
-    
+

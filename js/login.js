@@ -1,45 +1,16 @@
-/* =========================
-   LOGIN FUNCTION
-========================= */
+// 
+
 document.querySelector("form").addEventListener("submit", function(e) {
   e.preventDefault();
 
-  // Get input values
-  let email = document.querySelector("input[type='email']").value.trim();
-  let password = document.querySelector("input[type='password']").value.trim();
+  let email = document.querySelector("#email").value;
+  let password = document.querySelector("input[type='password']").value;
 
-  // Get stored user
-  let storedUser = JSON.parse(localStorage.getItem("user"));
+  let user = users.find(u => u.email === email && u.password === password);
 
-  // Check if user exists
-  if (!storedUser) {
-    alert("No account found! Please sign up first.");
-    window.location.href = "signup.html";
-    return;
-  }
-
-  // Validate credentials
-  if (email === storedUser.email && password === storedUser.password) {
-    alert("Login successful!");
-
-    // Save login session
-    localStorage.setItem("loggedIn", "true");
-
-    // Redirect to home page
-    window.location.href = "index.html";
+  if (user) {
+    alert("Login Successful ✅");
   } else {
-    alert("Invalid email or password!");
+    alert("Login Unsuccessful ❌");
   }
 });
-
-
-/* =========================
-   OPTIONAL: AUTO REDIRECT IF LOGGED IN
-========================= */
-if (localStorage.getItem("loggedIn") === "true") {
-  // User already logged in → go to home
-  window.location.href = "index.html";
-}
-if (localStorage.getItem("loggedIn") === "true") {
-  // change navbar text (optional)
-}
