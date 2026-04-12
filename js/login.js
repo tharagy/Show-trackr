@@ -40,3 +40,6 @@ if (localStorage.getItem("loggedIn") === "true") {
   // User already logged in → go to home
   window.location.href = "index.html";
 }
+if (localStorage.getItem("loggedIn") === "true") {
+  // change navbar text (optional)
+}

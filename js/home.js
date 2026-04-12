@@ -90,19 +90,21 @@ for (let i = 65; i <= 90; i++) {
 const categories = document.querySelectorAll(".categories span");
 
 categories.forEach(cat => {
-  cat.style.cursor = "pointer";
-
   cat.addEventListener("click", function () {
+
     let selected = this.textContent;
 
+    // Remove active from all
+    categories.forEach(c => c.classList.remove("active-category"));
+
+    // Add active to clicked
+    this.classList.add("active-category");
+
+    // Filter shows
     let filtered = shows.filter(show =>
       show.category.toLowerCase() === selected.toLowerCase()
     );
 
     displayShows(filtered);
-
-    // highlight active
-    categories.forEach(c => c.classList.remove("active-category"));
-    this.classList.add("active-category");
   });
 });
